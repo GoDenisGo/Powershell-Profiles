@@ -57,8 +57,9 @@ function prompt {
     Write-Host ('📁 ' + $CurrentFolder) -BackgroundColor Green -ForegroundColor Black -NoNewline
     $isrepo = Test-IsGitRepository
     if ($isrepo) {
+        $branch = git rev-parse --abbrev-ref HEAD
         Write-Host ("$BackColourOrange`u{E0B0}${`e[0m]}") -ForegroundColor Green -NoNewline # Right arrow
-        Write-Host ("$BackColourOrange`u{e0a0}${`e[0m}") -ForegroundColor Black -NoNewline
+        Write-Host ("$BackColourOrange`u{e0a0}$branch${`e[0m}") -ForegroundColor Black -NoNewline
         Write-Host ("$FrontColourOrange`u{E0B0}${`e[0m}") -BackgroundColor 5 -NoNewline # Right arrow
     } else {
         Write-Host ("`u{E0B0}") -BackgroundColor 5 -ForegroundColor Green -NoNewline # Right arrow
