@@ -3,7 +3,7 @@ Features:
 - Shows when terminal is running with  elevated privileges.
 - Shows current working directory
 - Shows current user
-- Detects git repos (but not branches, TODO)
+- Detects git repos and branches (branches not tested).
 - Easter Eggs
 
 The way this script is architectured is very poor. It serves as a demo of how the Terminal prompt can be decorated.
